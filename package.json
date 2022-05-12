@@ -11,6 +11,7 @@
     "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^1.0.6",
     "axios": "^0.27.2",
+    "quagga": "^0.12.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router": "^6.3.0",
