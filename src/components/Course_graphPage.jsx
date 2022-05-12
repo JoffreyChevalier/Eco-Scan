@@ -8,8 +8,7 @@ export default function Course_graphPage({ title, score }) {
             <h6 className="mr-8">Eco-score</h6>
             <p>{score}</p>
           </div>
-          <p className="text-gray-700 text-base mb-4">
-            <div className="flex">
+            <div className="flex text-gray-700 text-base mb-4">
               <ul className="m-4 w-1/2">
                 <li className="text-[#4A7856] font-bold">Total Co2: 7.55 eq/Kg</li>
                 <li>agriculture: 84.4 %</li>
@@ -26,7 +25,6 @@ export default function Course_graphPage({ title, score }) {
                 <li>Packaging: -8</li>
               </ul>
             </div>
-          </p>
           <p className="text-gray-600 text-xs">Last updated 3 mins ago</p>
         </div>
       </div>
