@@ -3,8 +3,8 @@ import PostToApi from "../components/PostToApi";
 function HomePage() {
   return (
     <div>
-      <h1>Hello Guys</h1>
-      <PostToApi/>
+      <h1 className="text-4xl">Hello Guys</h1>
+      <Footer />
     </div>
   );
 }
