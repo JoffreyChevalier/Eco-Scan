@@ -20,9 +20,9 @@ export default function Footer() {
         <a href="#!" className=" text-gray-800">
           <img src="./src/assets/graph.png" className="h-4" />
         </a>
-        <a href="#!" className=" text-gray-800">
+        <Link to="/panier">
           <img src="./src/assets/cart.png" className="h-4" />
-        </a>
+        </Link>
       </div>
     </footer>
   );
