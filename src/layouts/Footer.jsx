@@ -9,7 +9,7 @@ import cart from "@assets/cart.png";
 export default function Footer() {
   return (
     <footer
-      className="text-center text-white absolute w-full bottom-0 m-auto"
+      className="text-center text-white fixed w-full bottom-0 m-auto"
       style={{ backgroundColor: "#f1f1f1" }}
     >
       <div className="flex justify-around items-center w-full">

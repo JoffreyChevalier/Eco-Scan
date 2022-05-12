@@ -9,6 +9,7 @@ import {
   SupportIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import ShoppingCard from "../components/ShoppingCard";
 
 const resources = [
   {
@@ -133,25 +134,22 @@ const footerNavigation = {
 export default function HomePage() {
   return (
     <div className="bg-white">
-      <div className="bg-indigo-900">
+      <div className="bg-white">
         {/* Header */}
         <Popover className="relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b border-indigo-400 border-opacity-25 py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1"></div>
-              <div className="-mr-2 -my-2 md:hidden">
-                <Popover.Button className="bg-indigo-900 rounded-md p-2 inline-flex items-center justify-center text-indigo-300 hover:text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Open menu</span>
-                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                </Popover.Button>
-              </div>
+              <div className="-mr-2 -my-2 md:hidden"></div>
 
-              <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+              <div>
                 <a
                   href="#"
                   className="whitespace-nowrap bg-white border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium text-indigo-600 hover:bg-indigo-50"
                 >
-                  Sign up
+                  <div>
+                    <img className="w-28" src="./src/assets/login.png" alt="" />
+                  </div>
                 </a>
               </div>
             </div>
@@ -267,13 +265,28 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
           <div className="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
             <div className="max-w-xl">
-              <h2 className="text-4xl flex justify-center font-extrabold text-black sm:text-5xl sm:tracking-tight lg:text-6xl">
+              <h2 className="text-4xl text-center flex justify-center font-extrabold text-black sm:text-5xl sm:tracking-tight lg:text-6xl">
                 Historique de mes courses :
               </h2>
             </div>
           </div>
         </div>
       </div>
+      <ShoppingCard
+        date={"15/08/2022"}
+        title={"course 1"}
+        img={"./src/assets/happy.png"}
+      />
+      <ShoppingCard
+        date={"10/08/2022"}
+        title={"course 2"}
+        img={"./src/assets/neutral.png"}
+      />
+      <ShoppingCard
+        date={"11/08/2022"}
+        title={"course 3"}
+        img={"./src/assets/sad.png"}
+      />
     </div>
   );
 }
