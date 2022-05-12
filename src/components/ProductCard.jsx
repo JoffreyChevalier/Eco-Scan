@@ -1,8 +1,8 @@
-function ProductCard() {
+function ProductCard(addProductToBasket) {
   return (
-    <div>
+    <div className="m-4 flex items-center">
       <a
-        className="m-4 flex items-top overflow-hidden border border-gray-100 rounded-lg "
+        className="flex items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
         href=""
       >
         <div>
@@ -22,6 +22,14 @@ function ProductCard() {
           </p>
         </div>
       </a>
+      <button
+        type="button"
+        title="Ajouter le joueur"
+        className="relative right-2 h-7 w-10 bg-green-600 text-white font-bold text-xl px-2 rounded-full hover:bg-second_color_d active:scale-90"
+        onClick={(e) => addProductToBasket(e.target.value)}
+      >
+        +
+      </button>
     </div>
   );
 }
