@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import favorite from "@assets/favorite.png";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
           <img src="./src/assets/list.png" className="h-4" />
         </a>
         <a href="#!" className=" text-gray-800">
-          <img src="./src/assets/favorite.png" className="h-4" />
+          <img src={favorite} className="h-4" />
         </a>
         <Link to="/course">
           <img src="./src/assets/start.png" className="h-12" />
