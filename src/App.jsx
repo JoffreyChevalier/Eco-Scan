@@ -9,11 +9,15 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/course" element={<CurrentShopping />} />
-      </Routes>
-      <Footer />
+      <div>
+        <div className="mb-14">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/course" element={<CurrentShopping />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
