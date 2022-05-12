@@ -1,16 +1,12 @@
-function ProductCard(addProductToBasket) {
+function ProductCard(addProductToBasket, image) {
   return (
     <div className="m-4 flex items-center">
       <a
-        className="flex items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
+        className="flex bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
         href=""
       >
         <div>
-          <img
-            className="w-28"
-            src="https://www.hyperui.dev/photos/activity-1.jpeg"
-            alt=""
-          />
+          <img className="w-28" src={image} alt="" />
         </div>
 
         <div className="mx-2">

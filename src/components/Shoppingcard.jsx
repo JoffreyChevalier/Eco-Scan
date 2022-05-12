@@ -2,7 +2,7 @@ function ShoppingCard({ img, title, date }) {
   return (
     <div>
       <a
-        className="m-4 flex justify-between items-top overflow-hidden border border-gray-100 rounded-lg "
+        className="m-4 bg-white flex justify-between items-top overflow-hidden border border-gray-100 rounded-lg "
         href=""
       >
         <div>

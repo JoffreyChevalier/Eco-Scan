@@ -1,10 +1,10 @@
 import graphique from "@assets/graphique.png";
-import Course_graphPage from "./Course_graphPage";
+import Course_graphPage from "@components/Course_graphPage";
 
 export default function Graph() {
   return (
     <>
-          <header>
+      <header>
         <div className="flex items-center bg-green-200 h-16 justify-around">
           <img
             src="./src/assets/scanEco_logo.png"
@@ -22,9 +22,9 @@ export default function Graph() {
 
       <h2 className="mt-8 ml-8">Progression globale</h2>
       <img className="h-64 w-auto m-auto mt-8" src={graphique} />
-      <Course_graphPage title="Course du 12/03/2022" score="60/100"/>
-      <Course_graphPage title="Course du 10/03/2022" score="55/100"/>
-      <Course_graphPage title="Course du 08/03/2022" score="48/100"/>
+      <Course_graphPage title="Course du 12/03/2022" score="60/100" />
+      <Course_graphPage title="Course du 10/03/2022" score="55/100" />
+      <Course_graphPage title="Course du 08/03/2022" score="48/100" />
     </>
   );
 }
