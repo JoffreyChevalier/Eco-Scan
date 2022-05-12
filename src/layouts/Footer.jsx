@@ -11,7 +11,7 @@ export default function Footer() {
         <a href="#!" className=" text-gray-800">
           <img src="/src/assets/favorite.png" className="h-4" />
         </a>
-        <a href="#!" className=" text-gray-800">
+        <a href="./src/pages/CurrentShopping.jsx" className=" text-gray-800">
           <img src="/src/assets/start.png" className="h-12" />
         </a>
         <a href="#!" className=" text-gray-800">
