@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Quagga from "quagga";
+import BarcodeInput from "./BarcodeInput";
 
 function BarCodeScan() {
   const firstUpdate = useRef(true);
@@ -138,25 +139,38 @@ function BarCodeScan() {
   };
 
   return (
-    <div>
-      <h3>
-        Barcode scanner in React -{" "}
-        <a href="https://www.cluemediator.com/" target="_blank" rel="noopener">
-          Clue Mediator
-        </a>
-      </h3>
-      <button
-        onClick={() => setIsStart((prevStart) => !prevStart)}
-        style={{ marginBottom: 20 }}
-      >
-        {isStart ? "Stop" : "Start"}
-      </button>
-      {isStart && (
-        <React.Fragment>
-          <div id="scanner-container" />
-          <span>Barcode: {barcode}</span>
-        </React.Fragment>
-      )}
+    <div className="flex items-center p-4">
+      {!isStart && <BarcodeInput onBarcodeWritting={setBarcode} />}
+      <div>
+        <button
+          type="button"
+          className=""
+          onClick={() => setIsStart((prevStart) => !prevStart)}
+        >
+          {isStart ? (
+            <div className="flex flex-col items-center">
+              <React.Fragment>
+                <div id="scanner-container" className="w-[32rem]" />
+              </React.Fragment>
+              <span>
+                <img
+                  src="./src/assets/barcode_logo_stop.png"
+                  className="h-20"
+                  alt="Barcode logo"
+                />{" "}
+              </span>
+            </div>
+          ) : (
+            <span>
+              <img
+                src="./src/assets/barcode_logo.png"
+                className="h-10"
+                alt="Barcode logo"
+              />{" "}
+            </span>
+          )}
+        </button>
+      </div>
     </div>
   );
 }

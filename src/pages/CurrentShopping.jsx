@@ -1,9 +1,8 @@
-import BarCodeScan from "../components/BarCodeScan";
+import BarCodeScan from "../components/BarcodeScaner/BarCodeScan";
 
 function CurrentShopping() {
   return (
     <div>
-      <h1>scan code</h1>
       <BarCodeScan />
     </div>
   );
