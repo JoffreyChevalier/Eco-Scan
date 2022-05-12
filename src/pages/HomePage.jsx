@@ -130,7 +130,7 @@ const footerNavigation = {
   ],
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="bg-white">
       <div className="bg-indigo-900">
@@ -357,5 +357,3 @@ export default function Home() {
     </div>
   );
 }
-
-export default HomePage;
