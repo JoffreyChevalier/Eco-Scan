@@ -2,13 +2,16 @@ import BarCodeScan from "@components/BarcodeScaner/BarCodeScan";
 import ProductCard from "@components/ProductCard";
 import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
+import { Link } from "react-router-dom";
 
 function CurrentShopping() {
   return (
     <div>
       <header>
         <div className="flex items-center bg-green-200 h-16 justify-around">
-          <img src={logo} className="h-14" alt="logo" />
+          <Link to="/">
+            <img src={logo} className="h-14" alt="logo" />
+          </Link>
           <h1 className="text-center font-bold text-3xl">Mes Courses</h1>
           <img src={user} className="h-10 justify-end rounded-lg" alt="user" />
         </div>
