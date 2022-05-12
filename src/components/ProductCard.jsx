@@ -1,30 +1,20 @@
-function ProductCard() {
+function ProductCard(addProductToBasket) {
   return (
-    <div>
+    <div className="m-4 flex items-center">
       <a
-        className="m-8 grid grid-cols-1 overflow-hidden border border-gray-100 rounded-lg group sm:grid-cols-3"
+        className="flex items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
         href=""
       >
-        <div className="relative">
+        <div>
           <img
-            className="absolute inset-0 object-cover w-full h-full"
+            className="w-28"
             src="https://www.hyperui.dev/photos/activity-1.jpeg"
             alt=""
           />
         </div>
 
-        <div className="p-8 sm:col-span-2">
-          <ul className="flex space-x-1">
-            <li className="inline-block px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full">
-              Notice
-            </li>
-
-            <li className="inline-block px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full">
-              Information
-            </li>
-          </ul>
-
-          <h5 className="mt-4 font-bold">Lorem ipsum dolor sit amet.</h5>
+        <div className="mx-2">
+          <h5 className="mt-1 font-bold">Lorem ipsum dolor sit amet.</h5>
 
           <p className="mt-2 text-sm text-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
@@ -32,6 +22,14 @@ function ProductCard() {
           </p>
         </div>
       </a>
+      <button
+        type="button"
+        title="Ajouter le joueur"
+        className="relative right-2 h-7 w-10 bg-green-600 text-white font-bold text-xl px-2 rounded-full hover:bg-second_color_d active:scale-90"
+        onClick={(e) => addProductToBasket(e.target.value)}
+      >
+        +
+      </button>
     </div>
   );
 }
