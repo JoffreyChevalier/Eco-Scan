@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Quagga from "quagga";
 import BarcodeInput from "./BarcodeInput";
+import stopcamera from "@assets/barcode_logo_stop.png";
+import camera from "@assets/barcode_logo.png";
 
 function BarCodeScan() {
   const firstUpdate = useRef(true);
@@ -166,20 +168,12 @@ function BarCodeScan() {
                 <div id="scanner-container" className="w-[32rem]" />
               </React.Fragment>
               <span>
-                <img
-                  src="./src/assets/barcode_logo_stop.png"
-                  className="h-20"
-                  alt="Barcode logo"
-                />{" "}
+                <img src={stopcamera} className="h-20" alt="Barcode logo" />{" "}
               </span>
             </div>
           ) : (
             <span>
-              <img
-                src="./src/assets/barcode_logo.png"
-                className="h-10"
-                alt="Barcode logo"
-              />{" "}
+              <img src={camera} className="h-10" alt="Barcode logo" />{" "}
             </span>
           )}
         </button>
