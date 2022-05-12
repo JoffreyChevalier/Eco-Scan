@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer
@@ -11,9 +13,9 @@ export default function Footer() {
         <a href="#!" className=" text-gray-800">
           <img src="/src/assets/favorite.png" className="h-4" />
         </a>
-        <a href="./src/pages/CurrentShopping.jsx" className=" text-gray-800">
+        <Link to="/course">
           <img src="/src/assets/start.png" className="h-12" />
-        </a>
+        </Link>
         <a href="#!" className=" text-gray-800">
           <img src="/src/assets/graph.png" className="h-4" />
         </a>
