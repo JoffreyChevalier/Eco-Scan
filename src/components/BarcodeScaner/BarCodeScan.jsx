@@ -4,15 +4,31 @@ import BarcodeInput from "./BarcodeInput";
 import stopcamera from "@assets/barcode_logo_stop.png";
 import camera from "@assets/barcode_logo.png";
 
+import { getProduct } from "@services/api";
+
 function BarCodeScan() {
   const firstUpdate = useRef(true);
   const [isStart, setIsStart] = useState(false);
   const [barcode, setBarcode] = useState("");
   const [actualBarcode, setActualBarcode] = useState("");
 
+  async function fetchData() {
+    await getProduct(barcode);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [setBarcode]);
+
   const onKeyPress = (e) => {
     if (e.keyCode === 13) {
       setBarcode(actualBarcode);
+      console.log(barcode);
+      fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data.product);
+        });
     }
   };
 
