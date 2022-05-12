@@ -1,4 +1,4 @@
-import Footer from "../components/footer";
+import PostToApi from "../components/PostToApi";
 
 function HomePage() {
   return (

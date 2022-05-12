@@ -10,3 +10,7 @@ export const giusepeApi = async () => {
 export const getAllFood = async () => {
   return (await axios(`${API_OFF}`)).data;
 };
+
+export const postItemInCart = async (data) => {
+  return (await axios.post(`${API_URL}`, data)).data;
+};
