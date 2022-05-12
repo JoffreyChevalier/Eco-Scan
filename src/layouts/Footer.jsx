@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
+
 import favorite from "@assets/favorite.png";
+import list from "@assets/list.png";
+import start from "@assets/start.png";
+import graph from "@assets/graph.png";
+import cart from "@assets/cart.png";
 
 export default function Footer() {
   return (
@@ -8,20 +13,20 @@ export default function Footer() {
       style={{ backgroundColor: "#f1f1f1" }}
     >
       <div className="flex justify-around items-center w-full">
-        <a href="#!" className=" text-gray-800 ">
-          <img src="./src/assets/list.png" className="h-4" />
-        </a>
+        <Link to="/">
+          <img src={list} className="h-4" />
+        </Link>
         <a href="#!" className=" text-gray-800">
           <img src={favorite} className="h-4" />
         </a>
         <Link to="/course">
-          <img src="./src/assets/start.png" className="h-12" />
+          <img src={start} className="h-12" />
         </Link>
         <a href="#!" className=" text-gray-800">
-          <img src="./src/assets/graph.png" className="h-4" />
+          <img src={graph} className="h-4" />
         </a>
         <a href="#!" className=" text-gray-800">
-          <img src="./src/assets/cart.png" className="h-4" />
+          <img src={cart} className="h-4" />
         </a>
       </div>
     </footer>
