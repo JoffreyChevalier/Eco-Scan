@@ -1,3 +1,5 @@
+import PostToApi from "../components/PostToApi";
+
 function HomePage() {
   return (
     <div>
