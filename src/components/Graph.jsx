@@ -5,9 +5,12 @@ export default function Graph(){
         <h2 className="mt-8">Progression globale</h2>
         <img className="h-64 w-auto m-auto"src="./src/assets/graphique.png"/>
         <ul>
+            <div>
             <li className="mb-8">
                 Course du 19/03/2022
             </li>
+            </div>
+            <div></div>
             <li className="mb-8">
                 Course du 25/03/2022
             </li>
