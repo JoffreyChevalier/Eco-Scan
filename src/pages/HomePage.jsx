@@ -1,51 +1,15 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          orange: colors.orange,
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { Fragment } from "react";
+// import ShoppingCard from "../components/ShoppingCard";
 import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
   MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
   ShieldCheckIcon,
   SupportIcon,
-  ViewGridIcon,
   XIcon,
 } from "@heroicons/react/outline";
-import { CheckIcon, ChevronDownIcon, MinusIcon } from "@heroicons/react/solid";
 
-const callsToAction = [
-  { name: "Watch Demo", href: "#", icon: PlayIcon },
-  { name: "Contact Sales", href: "#", icon: PhoneIcon },
-];
 const resources = [
   {
     name: "Help Center",
@@ -75,133 +39,7 @@ const resources = [
     icon: ShieldCheckIcon,
   },
 ];
-const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
-  {
-    id: 2,
-    name: "How to use search engine optimization to drive traffic to your site",
-    href: "#",
-  },
-  { id: 3, name: "Improve your customer experience", href: "#" },
-];
-const tiers = [
-  {
-    name: "Basic",
-    href: "#",
-    priceMonthly: 9,
-    description: "Quis suspendisse ut fermentum neque vivamus non tellus.",
-  },
-  {
-    name: "Essential",
-    href: "#",
-    priceMonthly: 29,
-    description: "Quis eleifend a tincidunt pellentesque. A tempor in sed.",
-  },
-  {
-    name: "Premium",
-    href: "#",
-    priceMonthly: 59,
-    description:
-      "Orci volutpat ut sed sed neque, dui eget. Quis tristique non.",
-  },
-];
-const sections = [
-  {
-    name: "Features",
-    features: [
-      {
-        name: "Molestie lobortis massa.",
-        tiers: { Basic: true, Essential: true, Premium: true },
-      },
-      {
-        name: "Urna purus felis.",
-        tiers: { Basic: true, Essential: true, Premium: true },
-      },
-      {
-        name: "Tellus pulvinar sit dictum.",
-        tiers: { Essential: true, Premium: true },
-      },
-      {
-        name: "Convallis.",
-        tiers: { Essential: "Up to 20 users", Premium: "Up to 50 users" },
-      },
-    ],
-  },
-  {
-    name: "Reporting",
-    features: [
-      {
-        name: "Adipiscing.",
-        tiers: { Basic: true, Essential: true, Premium: true },
-      },
-      {
-        name: "Eget risus integer.",
-        tiers: { Essential: true, Premium: true },
-      },
-      { name: "Gravida leo urna velit.", tiers: { Premium: true } },
-      {
-        name: "Elementum ut dapibus mi feugiat cras nisl.",
-        tiers: { Premium: true },
-      },
-    ],
-  },
-  {
-    name: "Support",
-    features: [
-      {
-        name: "Sit dignissim.",
-        tiers: { Basic: true, Essential: true, Premium: true },
-      },
-      { name: "Congue at nibh et.", tiers: { Essential: true, Premium: true } },
-      {
-        name: "Volutpat feugiat mattis.",
-        tiers: { Essential: true, Premium: true },
-      },
-      {
-        name: "Tristique pellentesque ornare diam sapien.",
-        tiers: { Premium: true },
-      },
-    ],
-  },
-];
-const faqs = [
-  {
-    id: 1,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 2,
-    question: "How do you make holy water?",
-    answer:
-      "You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 3,
-    question: "Why do you never see elephants hiding in trees?",
-    answer:
-      "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 4,
-    question: "What do you call someone with no body and no nose?",
-    answer:
-      "Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 5,
-    question: "Why can't you hear a pterodactyl go to the bathroom?",
-    answer:
-      "Because the pee is silent. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 6,
-    question: "Why did the invisible man turn down the job offer?",
-    answer:
-      "He couldn't see himself doing it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-];
+
 const footerNavigation = {
   solutions: [
     { name: "Marketing", href: "#" },
@@ -292,7 +130,7 @@ const footerNavigation = {
   ],
 };
 
-export default function Example() {
+export default function Home() {
   return (
     <div className="bg-white">
       <div className="bg-indigo-900">
@@ -300,16 +138,7 @@ export default function Example() {
         <Popover className="relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b border-indigo-400 border-opacity-25 py-6 md:justify-start md:space-x-10">
-              <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
-                  <img
-                    className="h-8 w-auto sm:h-10"
-                    src="./src/assets/scanEco.png"
-                    alt=""
-                  />
-                </a>
-              </div>
+              <div className="flex justify-start lg:w-0 lg:flex-1"></div>
               <div className="-mr-2 -my-2 md:hidden">
                 <Popover.Button className="bg-indigo-900 rounded-md p-2 inline-flex items-center justify-center text-indigo-300 hover:text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open menu</span>
@@ -427,6 +256,14 @@ export default function Example() {
 
       {/* Comparison table */}
       <div>
+        <div>
+          <img
+            className="h-52 m-auto w-auto lg:h-10"
+            src="./src/assets/scanEco.png"
+            alt=""
+          />
+        </div>
+
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
           <div className="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
             <div className="max-w-xl">
