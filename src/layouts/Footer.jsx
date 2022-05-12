@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="text-center text-white" style={{backgroundColor: "#f1f1f1"}}>
+    <footer
+      className="text-center text-white"
+      style={{ backgroundColor: "#f1f1f1" }}
+    >
       <div className="container pt-9">
         <div className="flex justify-center mb-9">
           <a href="#!" className="mr-9 text-gray-800">
@@ -110,7 +113,7 @@ export default function Footer() {
 
       <div
         className="text-center text-gray-700 p-4"
-        style={{backgroundColor: "rgba(0, 0, 0, 0.2);"}}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2);" }}
       >
         © 2021 Copyright:
         <a className="text-gray-800" href="https://tailwind-elements.com/">

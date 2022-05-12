@@ -6,6 +6,13 @@ function BarCodeScan() {
   const firstUpdate = useRef(true);
   const [isStart, setIsStart] = useState(false);
   const [barcode, setBarcode] = useState("");
+  const [actualBarcode, setActualBarcode] = useState("");
+
+  const onKeyPress = (e) => {
+    if (e.keyCode === 13) {
+      setBarcode(actualBarcode);
+    }
+  };
 
   useEffect(() => {
     return () => {
@@ -140,7 +147,13 @@ function BarCodeScan() {
 
   return (
     <div className="flex items-center p-4">
-      {!isStart && <BarcodeInput onBarcodeWritting={setBarcode} />}
+      {!isStart && (
+        <BarcodeInput
+          barcode={actualBarcode}
+          onBarcodeWritting={setActualBarcode}
+          handleKeyPress={onKeyPress}
+        />
+      )}
       <div>
         <button
           type="button"
