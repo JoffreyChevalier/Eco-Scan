@@ -1,5 +1,4 @@
-import BarcodeInput from "../components/BarcodeInput";
-import BarCodeScan from "../components/BarCodeScan";
+import BarCodeScan from "../components/BarcodeScaner/BarCodeScan";
 
 function CurrentShopping() {
   return (
