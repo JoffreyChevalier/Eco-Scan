@@ -1,36 +1,20 @@
-function ShoppingCard() {
+function ShoppingCard({ img, title, date }) {
   return (
     <div>
       <a
-        className="m-8 grid grid-cols-1 overflow-hidden border border-gray-100 rounded-lg group sm:grid-cols-3"
+        className="m-4 flex justify-between items-top overflow-hidden border border-gray-100 rounded-lg "
         href=""
       >
-        <div className="relative">
-          <img
-            className="absolute inset-0 object-cover w-full h-full"
-            src="https://www.hyperui.dev/photos/activity-1.jpeg"
-            alt=""
-          />
+        <div>
+          <img className="w-28" src="./src/assets/scanEco.png" alt="" />
+        </div>
+        <div className="mx-2 flex flex-col content-center justify-center">
+          <h5 className="mt-1 font-bold"> {title} :</h5>
+
+          <p className="mt-2 text-sm text-gray-500"> {date} :</p>
         </div>
 
-        <div className="p-8 sm:col-span-2">
-          <ul className="flex space-x-1">
-            <li className="inline-block px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full">
-              Notice
-            </li>
-
-            <li className="inline-block px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full">
-              Information
-            </li>
-          </ul>
-
-          <h5 className="mt-4 font-bold">Lorem ipsum dolor sit amet.</h5>
-
-          <p className="mt-2 text-sm text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-            adipisci!
-          </p>
-        </div>
+        <img className="w-28" src={img} alt="" />
       </a>
     </div>
   );
