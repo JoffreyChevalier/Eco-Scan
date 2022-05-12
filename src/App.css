@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#scanner-container {
-  position: relative;
-}
-
 .drawingBuffer {
   position: absolute;
   left: 0;
