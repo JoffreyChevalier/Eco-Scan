@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 
-import HomePage from "./pages/HomePage";
-import CurrentShopping from "./pages/CurrentShopping";
+import HomePage from "@pages/HomePage";
+import CurrentShopping from "@pages/CurrentShopping";
 import Footer from "./layouts/Footer";
 import Graph from "./components/Graph";
 
