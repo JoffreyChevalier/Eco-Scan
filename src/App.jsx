@@ -29,13 +29,13 @@ function App() {
       setProductName,
       setProductImage,
       setProductScore,
-      setBarcodeContext
+      setBarcodeContext,
     };
   }
 
   return (
-    <div className="bg-[url(@assets/background.png)] h-screen w-screen bg-contain bg-fixed bg-center">
-      <div className="mb-20">
+    <div className="bg-[url(@assets/background.png)] absolute h-screen w-screen bg-contain bg-fixed bg-center">
+      <div className="mb-">
         <ProductContext.Provider value={getProductContext()}>
           <Routes>
             <Route path="/" element={<HomePage />} />

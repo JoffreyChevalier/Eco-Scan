@@ -21,7 +21,7 @@ function ProductCard(
             {productName}
           </h5>
 
-          <p className=" text-gray-500"> Score: {productScore.toUpperCase()}</p>
+          <p className=" text-gray-500"> Score: {productScore}</p>
         </div>
       </a>
       <button
