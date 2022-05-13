@@ -11,7 +11,9 @@ function FavoriteShopping() {
           <Link to="/">
             <img src={logo} className="h-14" alt="logo" />
           </Link>
-          <h1 className="text-center font-bold text-3xl">Mes Courses</h1>
+          <h1 className="text-center font-extrabold font-title text-4xl">
+            Mes produits favoris
+          </h1>
           <img src={user} className="h-10 justify-end rounded-lg" alt="user" />
         </div>
       </header>
