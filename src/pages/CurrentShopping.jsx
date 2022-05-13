@@ -3,7 +3,7 @@ import ProductCard from "@components/ProductCard";
 import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductContext from "@context/ProductContext";
 
 function CurrentShopping() {
@@ -16,6 +16,7 @@ function CurrentShopping() {
     productImage,
     productScore,
   } = useContext(ProductContext);
+  const[productInBasket, setProductInBasket] = useState([])
 
   console.log(barcodeContext);
 
@@ -31,10 +32,15 @@ function CurrentShopping() {
       });
   }
 
+
   // async function handleClick(){
   //   const response = await getProduct({barcodeContext});
   //   setProductName(response.product.product_name_fr);
   // }
+
+  function onNewProductInBasket(){
+    setProductInBasket([...productInBasket, { name: productName, image: productImage, score : productScore }]);
+  }
 
   console.log(handleClick);
 
@@ -51,7 +57,7 @@ function CurrentShopping() {
       </header>
       <div className="flex mt-6 flex-col items-center">
         <BarCodeScan />
-        <ProductCard />
+        <ProductCard onClick={onNewProductInBasket} productEcoScore={productScore} productName={productName} productImage={productImage}/>
       </div>
       <div>
         <p className="w-64 bg-white h-8">{barcodeContext}</p>

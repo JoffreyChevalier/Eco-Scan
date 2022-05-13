@@ -1,8 +1,8 @@
 function ProductCard(
-  addProductToBasket,
+  onNewProductInBasket,
   productImage,
   productName,
-  productEcoScore
+  productEcoScore, onClick
 ) {
   return (
     <div className="m-4 flex items-center">
@@ -24,7 +24,7 @@ function ProductCard(
         type="button"
         title="Ajouter le joueur"
         className="relative right-2 h-7 w-10 bg-green-600 text-white font-bold text-xl px-2 rounded-full hover:bg-second_color_d active:scale-90"
-        onClick={(e) => addProductToBasket(e.target.value)}
+        onClick={onClick}
       >
         +
       </button>
