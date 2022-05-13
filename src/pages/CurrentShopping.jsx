@@ -36,8 +36,6 @@ function CurrentShopping() {
   //   setProductName(response.product.product_name_fr);
   // }
 
-  console.log(handleClick);
-
   return (
     <div>
       <header>
@@ -54,7 +52,7 @@ function CurrentShopping() {
         <ProductCard
           productImage={productImage}
           productName={productName}
-          productScore={productScore}
+          productScore={productScore.toUpperCase()}
         />
       </div>
       <div>
