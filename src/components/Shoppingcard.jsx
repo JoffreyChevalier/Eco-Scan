@@ -1,12 +1,14 @@
+import logo from "@assets/logo.png";
+
 function ShoppingCard({ img, title, date }) {
   return (
     <div className="w4/5">
       <a
-        className="m-4 flex justify-between items-center overflow-hidden border border-gray-100 rounded-lg "
-        href=""
+        className="m-4 flex justify-around items-center overflow-hidden border border-gray-100 rounded-lg "
+        href="" 
       >
         <div>
-          <img className="w-28" src="./src/assets/scanEco.png" alt="" />
+          <img className="w-28" src={logo} alt="" />
         </div>
         <div className="mx-2 flex flex-col content-center justify-center">
           <h5 className="mt-1 font-bold"> {title} :</h5>

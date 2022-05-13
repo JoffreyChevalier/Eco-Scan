@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="bg-[url(@assets/background.png)] h-screen w-screen bg-contain bg-fixed bg-center">
-      <div className="mb-10">
+      <div className="mb-20">
         <ProductContext.Provider value={getProductContext()}>
           <Routes>
             <Route path="/" element={<HomePage />} />

@@ -2,8 +2,11 @@ import FavoriteCard from "@components/FavoriteCard";
 import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
 function FavoriteShopping() {
+  const {productName, productImage, productScore} = useContext(ProductContext);
+
   return (
     <div>
       <header>
@@ -15,8 +18,9 @@ function FavoriteShopping() {
           <img src={user} className="h-10 justify-end rounded-lg" alt="user" />
         </div>
       </header>
+
       <div className="flex mt-6 flex-col items-center">
-        <FavoriteCard />
+        <FavoriteCard productImage={productImage} productName={productName} productScore={productScore}/>
         <FavoriteCard />
         <FavoriteCard />
       </div>
