@@ -55,7 +55,11 @@ function CurrentShopping() {
       </header>
       <div className="flex mt-6 flex-col items-center">
         <BarCodeScan />
-        <ProductCard />
+        <ProductCard
+          productImage={productImage}
+          productName={productName}
+          productScore={productScore}
+        />
       </div>
       <div>
         <p className="w-64 bg-white h-8">{barcodeContext}</p>

@@ -14,7 +14,7 @@ function BarCodeScan(products) {
   const [productName, setProductName] = useState([]);
   const [productImage, setProductImage] = useState([]);
   const [productScore, setProductScore] = useState([]);
-  const {setBarcodeContext} = useContext(ProductContext);
+  const { setBarcodeContext } = useContext(ProductContext);
   // console.log(barcode);
 
   function onNewProductScanned() {
