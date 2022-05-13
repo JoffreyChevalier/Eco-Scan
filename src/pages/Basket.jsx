@@ -14,6 +14,9 @@ function FavoriteShopping() {
   const [productCName, setCProductName] = useState("");
   const [productCImage, setCProductImage] = useState("");
   const [productCScore, setCProductScore] = useState("");
+  const [productOName, setOProductName] = useState("");
+  const [productOImage, setOProductImage] = useState("");
+  const [productOScore, setOProductScore] = useState("");
 
   useEffect(() => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/3422210436245.json`)
@@ -39,6 +42,14 @@ function FavoriteShopping() {
         setCProductName(data.product.product_name);
         setCProductScore(data.product.ecoscore_grade);
       });
+
+    fetch(`https://world.openfoodfacts.org/api/v0/product/3560070453276.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setOProductImage(data.product.image_small_url);
+        setOProductName(data.product.product_name);
+        setOProductScore(data.product.ecoscore_grade);
+      });
   }, []);
 
   return (
@@ -59,6 +70,38 @@ function FavoriteShopping() {
         </div>
       </header>
       <div className="flex  mt-6 flex-col items-center">
+        {" "}
+        <div className="m-4  flex items-center">
+          <a
+            className="flex w-[20rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
+            href="https://fr.openfoodfacts.org/produit/3560070453276/100-pur-jus-jus-d-orange-sans-pulpe-carrefour"
+          >
+            <img
+              className="w-20 p-4 border-r border-r-slate-200"
+              src={productOImage}
+              alt=""
+            />
+
+            <div className="relative top-2 left-3">
+              <h5 className="mb-2 font-standard font-bold text-lg">
+                {productOName}
+              </h5>
+
+              <p className=" text-gray-500">
+                {" "}
+                Score: {productOScore.toUpperCase()}
+              </p>
+            </div>
+          </a>
+          <button
+            type="button"
+            title="Ajouter le joueur"
+            className="relative right-4 bottom-20 h-7 w-10 bg-red-600 text-white font-bold text-xl px-2 rounded-full hover:bg-second_color_d active:scale-90"
+            onClick={(e) => addProductToBasket(e.target.value)}
+          >
+            -
+          </button>
+        </div>
         <div className="m-4  flex items-center">
           <a
             className="flex w-[20rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
