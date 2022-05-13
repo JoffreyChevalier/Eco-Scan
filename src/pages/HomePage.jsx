@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
-import ShoppingCard from "@components/ShoppingCard";
+import ShoppingCard from "@components/Shoppingcard";
 
 export default function HomePage() {
   return (
@@ -11,10 +11,14 @@ export default function HomePage() {
           <Link to="/">
             <img src={logo} className="h-14" alt="logo" />
           </Link>
-          <h1 className="text-center font-extrabold font-title text-4xl">
-            Mes Courses
+          <h1 className="text-center text-slate-700 font-extrabold font-title text-4xl">
+            Historiques
           </h1>
-          <img src={user} className="h-10 justify-end rounded-lg" alt="user" />
+          <img
+            src={user}
+            className="h-10 justify-end rounded-full"
+            alt="user"
+          />
         </div>
       </header>
       <div>
@@ -26,18 +30,18 @@ export default function HomePage() {
       </div>
       <ShoppingCard
         date={"15/08/2022"}
-        title={"course 1"}
+        nb={"64"}
         img={"./src/assets/happy.png"}
       />
       <ShoppingCard
         date={"10/08/2022"}
-        title={"course 2"}
-        img={"./src/assets/neutral.png"}
+        nb={"46"}
+        img={"./src/assets/sad.png"}
       />
       <ShoppingCard
         date={"11/08/2022"}
-        title={"course 3"}
-        img={"./src/assets/sad.png"}
+        nb={"21"}
+        img={"./src/assets/neutral.png"}
       />
     </div>
   );
