@@ -16,18 +16,18 @@ export default function Footer() {
         <Link to="/">
           <img src={list} className="h-6" />
         </Link>
-        <a href="#!" className=" text-gray-800">
+        <Link to="/favoris">
           <img src={favorite} className="h-6" />
-        </a>
+        </Link>
         <Link to="/course">
           <img src={start} className="h-14" />
         </Link>
         <Link to="/compte">
           <img src={graph} className="h-6" />
         </Link>
-        <a href="#!" className=" text-gray-800">
+        <Link to="/panier">
           <img src={cart} className="h-6" />
-        </a>
+        </Link>
       </div>
     </footer>
   );
