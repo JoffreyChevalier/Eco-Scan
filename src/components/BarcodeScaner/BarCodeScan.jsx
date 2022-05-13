@@ -62,8 +62,11 @@ function BarCodeScan() {
   }, [isStart]);
 
   const _onDetected = (res) => {
-    // stopScanner();
+    stopScanner();
     setBarcode(res.codeResult.code);
+    if (res.codeResult.code.length === 13) {
+      stopScanner();
+    }
   };
 
   const startScanner = () => {
@@ -180,7 +183,7 @@ function BarCodeScan() {
     <div className="flex items-center p-4">
       {!isStart && (
         <BarcodeInput
-          barcode={actualBarcode}
+          barcode={actualBarcode || barcode}
           onBarcodeWritting={setActualBarcode}
           handleKeyPress={onKeyPress}
         />

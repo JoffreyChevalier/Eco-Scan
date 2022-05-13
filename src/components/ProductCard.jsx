@@ -7,7 +7,7 @@ function ProductCard({
   return (
     <div className="m-4 flex items-center">
       <a
-        className="flex w-[20rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
+        className="flex w-[21rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
         href=""
       >
         <img
@@ -27,8 +27,8 @@ function ProductCard({
       <button
         type="button"
         title="Ajouter le joueur"
-        className="relative right-2 h-7 w-10 bg-green-600 text-white font-bold text-xl px-2 rounded-full hover:bg-second_color_d active:scale-90"
-        onClick={(e) => addProductToBasket(e.target.value)}
+        className="absolute right-2 h-10 w-10 bg-green-600 text-white font-bold text-xl px-2 rounded-full hover:bg-second_color_d active:scale-90"
+        onClick={() => alert("Ajouter au Panier")}
       >
         +
       </button>

@@ -59,21 +59,6 @@ function CurrentShopping() {
           productScore={productScore.toUpperCase()}
         />
       </div>
-      <div>
-        <p className="w-64 bg-white h-8">{barcodeContext}</p>
-        <button onClick={handleClick}> Envoyer </button>
-        <div>
-          <h2>Nom du produit</h2>
-          <p>{productName}</p>
-        </div>
-        <div>
-          <h2>Eco-score</h2>
-          <p>{productScore}</p>
-        </div>
-        <div>
-          <img src={productImage} />
-        </div>
-      </div>
     </div>
   );
 }
