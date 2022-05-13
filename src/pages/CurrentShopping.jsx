@@ -7,8 +7,15 @@ import { useContext } from "react";
 import ProductContext from "@context/ProductContext";
 
 function CurrentShopping() {
-  const { barcodeContext, setProductImage, setProductName, setProductScore, productName, productImage, productScore  } =
-    useContext(ProductContext);
+  const {
+    barcodeContext,
+    setProductImage,
+    setProductName,
+    setProductScore,
+    productName,
+    productImage,
+    productScore,
+  } = useContext(ProductContext);
 
   console.log(barcodeContext);
 
@@ -18,9 +25,9 @@ function CurrentShopping() {
     )
       .then((res) => res.json())
       .then((data) => {
-        setProductImage(data.product);
+        setProductImage(data.product.image_small_url);
         setProductName(data.product.product_name_fr);
-        setProductScore(data.product);
+        setProductScore(data.product.ecoscore_grade);
       });
   }
 
@@ -29,7 +36,7 @@ function CurrentShopping() {
   //   setProductName(response.product.product_name_fr);
   // }
 
-  console.log(handleClick)
+  console.log(handleClick);
 
   return (
     <div>
@@ -49,8 +56,17 @@ function CurrentShopping() {
       <div>
         <p className="w-64 bg-white h-8">{barcodeContext}</p>
         <button onClick={handleClick}> Envoyer </button>
-        <p>{productName}</p>
-        <p>{productScore}</p>
+        <div>
+          <h2>Nom du produit</h2>
+          <p>{productName}</p>
+        </div>
+        <div>
+          <h2>Eco-score</h2>
+          <p>{productScore}</p>
+        </div>
+        <div>
+          <img src={productImage} />
+        </div>
       </div>
     </div>
   );
