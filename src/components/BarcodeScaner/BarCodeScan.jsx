@@ -6,11 +6,21 @@ import camera from "@assets/barcode_logo.png";
 
 import { getProduct } from "@services/api";
 
-function BarCodeScan() {
+function BarCodeScan(products) {
   const firstUpdate = useRef(true);
   const [isStart, setIsStart] = useState(false);
   const [barcode, setBarcode] = useState("");
   const [actualBarcode, setActualBarcode] = useState("");
+  const [productName, setProductName] = useState([]);
+  const [productImage, setProductImage] = useState([]);
+  const [productScore, setProductScore] = useState([]);
+
+  function onNewProductScanned() {
+    onChange([
+      ...products,
+      { name: productName, image: productImage, score: productScore },
+    ]);
+  }
 
   async function fetchData() {
     await getProduct(barcode);
@@ -23,11 +33,12 @@ function BarCodeScan() {
   const onKeyPress = (e) => {
     if (e.keyCode === 13) {
       setBarcode(actualBarcode);
-      console.log(barcode);
       fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.product);
+          setProductImage(data.product);
+          setProductName(data.product.product_name_fr);
+          setProductScore(data.product);
         });
     }
   };

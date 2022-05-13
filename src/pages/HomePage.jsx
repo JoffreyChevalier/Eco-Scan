@@ -11,19 +11,17 @@ export default function HomePage() {
           <Link to="/">
             <img src={logo} className="h-14" alt="logo" />
           </Link>
-          <h1 className="text-center font-bold text-3xl">Historiques</h1>
+          <h1 className="text-center font-extrabold font-title text-4xl">
+            Mes Courses
+          </h1>
           <img src={user} className="h-10 justify-end rounded-lg" alt="user" />
         </div>
       </header>
       <div>
-        <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
-          <div className="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-between lg:items-center">
-            <div className="max-w-xl">
-              <h2 className="text-4xl text-center flex justify-center font-extrabold text-black sm:text-5xl sm:tracking-tight lg:text-6xl">
-                Vos dernieres courses courses :
-              </h2>
-            </div>
-          </div>
+        <div className="py-4">
+          <h2 className="ml-4 text-2xl font-standard font-bold text-black sm:text-5xl sm:tracking-tight lg:text-6xl">
+            Vos dernieres courses :
+          </h2>
         </div>
       </div>
       <ShoppingCard

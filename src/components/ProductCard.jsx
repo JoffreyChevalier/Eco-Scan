@@ -1,4 +1,9 @@
-function ProductCard(addProductToBasket, image) {
+function ProductCard(
+  addProductToBasket,
+  productImage,
+  productName,
+  productEcoScore
+) {
   return (
     <div className="m-4 flex items-center">
       <a
@@ -6,16 +11,13 @@ function ProductCard(addProductToBasket, image) {
         href=""
       >
         <div>
-          <img className="w-28" src={image} alt="" />
+          <img className="w-28" src={productImage} alt="" />
         </div>
 
         <div className="mx-2">
-          <h5 className="mt-1 font-bold">Lorem ipsum dolor sit amet.</h5>
+          <h5 className="mt-1 font-bold">{productName}</h5>
 
-          <p className="mt-2 text-sm text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-            adipisci!
-          </p>
+          <img src={productEcoScore} alt="eco-score" />
         </div>
       </a>
       <button
