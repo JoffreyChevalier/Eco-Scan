@@ -20,7 +20,7 @@ export default function HomePage() {
       <div>
         <div className="py-4">
           <h2 className="ml-4 text-2xl font-standard font-bold text-black sm:text-5xl sm:tracking-tight lg:text-6xl">
-            Vos dernieres courses :
+            Vos dernières courses :
           </h2>
         </div>
       </div>
