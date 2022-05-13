@@ -44,7 +44,11 @@ function CurrentShopping() {
             <img src={logo} className="h-14" alt="logo" />
           </Link>
           <h1 className="text-center font-bold text-3xl">Mes Courses</h1>
-          <img src={user} className="h-10 justify-end rounded-lg" alt="user" />
+          <img
+            src={user}
+            className="h-10 justify-end rounded-full"
+            alt="user"
+          />
         </div>
       </header>
       <div className="flex mt-6 flex-col items-center">
