@@ -1,4 +1,3 @@
-import FavoriteCard from "@components/FavoriteCard";
 import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
 import { Link } from "react-router-dom";
@@ -62,7 +61,7 @@ function FavoriteShopping() {
         <div className="m-4  flex items-center">
           <a
             className="flex w-[20rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
-            href=""
+            href="https://fr.openfoodfacts.org/produit/3017620429484/nutella-pate-a-tartiner-noisettes-cacao-t825-pot-de-825-gr-ferrero"
           >
             <img
               className="w-20 p-4 border-r border-r-slate-200"
@@ -93,7 +92,7 @@ function FavoriteShopping() {
         <div className="m-4  flex items-center">
           <a
             className="flex w-[20rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
-            href=""
+            href="https://fr.openfoodfacts.org/produit/7613035676497/ricore-original-cafe-chicoree-boite-260g-nestle"
           >
             <img
               className="w-20 p-4 border-r border-r-slate-200"
@@ -124,7 +123,7 @@ function FavoriteShopping() {
         <div className="m-4  flex items-center">
           <a
             className="flex w-[20rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
-            href=""
+            href="https://fr.openfoodfacts.org/produit/3261055930422/le-cassoulet-mitonne-william-saurin"
           >
             <img
               className="w-20 p-4 border-r border-r-slate-200"
