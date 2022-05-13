@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Quagga from "quagga";
 import BarcodeInput from "./BarcodeInput";
 import stopcamera from "@assets/barcode_logo_stop.png";
 import camera from "@assets/barcode_logo.png";
-
 import { getProduct } from "@services/api";
+import ProductContext from "@context/ProductContext";
 
 function BarCodeScan(products) {
   const firstUpdate = useRef(true);
@@ -14,6 +14,8 @@ function BarCodeScan(products) {
   const [productName, setProductName] = useState([]);
   const [productImage, setProductImage] = useState([]);
   const [productScore, setProductScore] = useState([]);
+  const {setBarcodeContext} = useContext(ProductContext);
+  // console.log(barcode);
 
   function onNewProductScanned() {
     onChange([
@@ -63,6 +65,8 @@ function BarCodeScan(products) {
     // stopScanner();
     setBarcode(res.codeResult.code);
   };
+
+  setBarcodeContext(barcode);
 
   const startScanner = () => {
     Quagga.init(

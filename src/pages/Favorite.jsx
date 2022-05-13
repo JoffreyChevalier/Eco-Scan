@@ -3,6 +3,7 @@ import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+import ProductContext from "@context/ProductContext";
 
 function FavoriteShopping() {
   const {productName, productImage, productScore} = useContext(ProductContext);
