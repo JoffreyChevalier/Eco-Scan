@@ -10,11 +10,9 @@ function ShoppingCard({ img, title, date }) {
         </div>
         <div className="mx-2 flex flex-col content-center justify-center">
           <h5 className="mt-1 font-bold"> {title} :</h5>
-
           <p className="mt-2 text-sm text-gray-500"> {date} :</p>
         </div>
-
-        <img className="w-8 h-8" src={img} alt="" />
+        <img className="w-8 h-8 items-center" src={img} alt="" />
       </a>
     </div>
   );
