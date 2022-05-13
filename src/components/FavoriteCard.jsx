@@ -22,6 +22,14 @@ function FavoriteCard(addProductToBasket) {
           </p>
         </div>
       </a>
+      <button
+        type="button"
+        title="Ajouter le joueur"
+        className="relative right-6 bottom-12 h-7 w-1 text-white font-bold text-xl px-2 rounded-full hover:bg-second_color_d active:scale-90"
+        onClick={(e) => addProductToBasket(e.target.value)}
+      >
+        ❤️
+      </button>
     </div>
   );
 }
