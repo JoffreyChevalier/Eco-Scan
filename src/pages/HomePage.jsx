@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
 import ShoppingCard from "@components/Shoppingcard";
+import happy from "@assets/happy.png";
+import sad from "@assets/sad.png";
+import neutral from "@assets/neutral.png";
 
 export default function HomePage() {
   return (
@@ -28,21 +31,9 @@ export default function HomePage() {
           </h2>
         </div>
       </div>
-      <ShoppingCard
-        date={"15/08/2022"}
-        nb={"64"}
-        img={"./src/assets/happy.png"}
-      />
-      <ShoppingCard
-        date={"10/08/2022"}
-        nb={"46"}
-        img={"./src/assets/sad.png"}
-      />
-      <ShoppingCard
-        date={"11/08/2022"}
-        nb={"21"}
-        img={"./src/assets/neutral.png"}
-      />
+      <ShoppingCard date={"15/08/2022"} nb={"64"} img={happy} />
+      <ShoppingCard date={"10/08/2022"} nb={"46"} img={sad} />
+      <ShoppingCard date={"11/08/2022"} nb={"21"} img={neutral} />
     </div>
   );
 }

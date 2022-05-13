@@ -34,8 +34,8 @@ function App() {
   }
 
   return (
-    <div className="bg-[url(@assets/background.png)] absolute h-screen w-screen bg-contain bg-fixed bg-center">
-      <div className="mb-">
+    <div className="bg-[url(@assets/background.png)] min-h-screen w-screen bg-auto bg-fixed bg-center">
+      <div>
         <ProductContext.Provider value={getProductContext()}>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -46,7 +46,9 @@ function App() {
           </Routes>
         </ProductContext.Provider>
       </div>
-      <Footer />
+      <div className="mt-14">
+        <Footer />
+      </div>
     </div>
   );
 }
