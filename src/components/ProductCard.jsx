@@ -1,9 +1,9 @@
-function ProductCard(
+function ProductCard({
   addProductToBasket,
   productImage,
   productName,
-  productScore
-) {
+  productScore,
+}) {
   return (
     <div className="m-4 flex items-center">
       <a
