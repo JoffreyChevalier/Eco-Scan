@@ -1,4 +1,4 @@
-import graphique from "@assets/graphique.png";
+import graphique from "@assets/graphC.png";
 import Course_graphPage from "@components/Course_graphPage";
 import logo from "@assets/scanEco_logo.png";
 import user from "@assets/fake_user.jpg";
@@ -23,7 +23,7 @@ export default function Graph() {
         </div>
       </header>
 
-      <h2 className="mt-8 ml-8">Progression globale</h2>
+      <h2 className="mt-8 ml-8">Progression globale : </h2>
       <img className="h-64 w-auto m-auto mt-8" src={graphique} />
       <Course_graphPage title="Course du 12/03/2022" score="60/100" />
       <Course_graphPage title="Course du 10/03/2022" score="55/100" />
