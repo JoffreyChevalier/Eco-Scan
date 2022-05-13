@@ -1,6 +1,6 @@
 export default function Course_graphPage({ title, score }) {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center px-8">
       <div className="flex flex-col w-6/9 mt-8 rounded-lg bg-white shadow-lg border-solid border-2 border-[#4A7856] ">
         <div className="p-6 flex flex-col justify-start">
           <h5 className="text-gray-900 text-xl font-medium mb-2">{title}</h5>
@@ -11,7 +11,9 @@ export default function Course_graphPage({ title, score }) {
           <p className="text-gray-700 text-base mb-4">
             <div className="flex">
               <ul className="m-4 w-1/2">
-                <li className="text-[#4A7856] font-bold">Total Co2: 7.55 eq/Kg</li>
+                <li className="text-[#4A7856] font-bold">
+                  Total Co2: 7.55 eq/Kg
+                </li>
                 <li>agriculture: 84.4 %</li>
                 <li>processing: 9.1 %</li>
                 <li>packaging: 2.7 %</li>
