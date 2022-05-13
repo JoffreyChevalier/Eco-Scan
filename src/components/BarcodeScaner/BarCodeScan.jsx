@@ -64,6 +64,10 @@ function BarCodeScan(products) {
   const _onDetected = (res) => {
     // stopScanner();
     setBarcode(res.codeResult.code);
+
+    if (res.codeResult.code.length === 13) {
+      stopScanner();
+    }
   };
 
   setBarcodeContext(barcode);
