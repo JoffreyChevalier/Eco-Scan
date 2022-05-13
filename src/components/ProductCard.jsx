@@ -2,22 +2,26 @@ function ProductCard(
   addProductToBasket,
   productImage,
   productName,
-  productEcoScore
+  productScore
 ) {
   return (
     <div className="m-4 flex items-center">
       <a
-        className="flex bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
+        className="flex w-[20rem] bg-white items-top overflow-hidden drop-shadow-lg border border-gray-100 rounded-lg "
         href=""
       >
-        <div>
-          <img className="w-28" src={productImage} alt="" />
-        </div>
+        <img
+          className="w-20 p-4 border-r border-r-slate-200"
+          src={productImage}
+          alt=""
+        />
 
-        <div className="mx-2">
-          <h5 className="mt-1 font-bold">{productName}</h5>
+        <div className="relative top-2 left-3">
+          <h5 className="mb-2 font-standard font-bold text-xl">
+            {productName}
+          </h5>
 
-          <img src={productEcoScore} alt="eco-score" />
+          <p className=" text-gray-500"> Score: {productScore}</p>
         </div>
       </a>
       <button

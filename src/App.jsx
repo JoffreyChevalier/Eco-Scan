@@ -29,13 +29,13 @@ function App() {
       setProductName,
       setProductImage,
       setProductScore,
-      setBarcodeContext
+      setBarcodeContext,
     };
   }
 
   return (
-    <div className="bg-[url(@assets/background.png)] h-screen w-screen bg-contain bg-fixed bg-center">
-      <div className="mb-20">
+    <div className="bg-[url(@assets/background.png)] min-h-screen w-screen bg-auto bg-fixed bg-center">
+      <div>
         <ProductContext.Provider value={getProductContext()}>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -46,7 +46,9 @@ function App() {
           </Routes>
         </ProductContext.Provider>
       </div>
-      <Footer />
+      <div className="mt-14">
+        <Footer />
+      </div>
     </div>
   );
 }

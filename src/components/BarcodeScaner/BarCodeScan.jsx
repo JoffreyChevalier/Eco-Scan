@@ -38,9 +38,9 @@ function BarCodeScan(products) {
       fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
         .then((res) => res.json())
         .then((data) => {
-          setProductImage(data.product);
-          setProductName(data.product.product_name_fr);
-          setProductScore(data.product);
+          setProductImage(data.product.image_small_url);
+          setProductName(data.product.product_name_en);
+          setProductScore(data.product.ecoscore_grade);
         });
     }
   };
