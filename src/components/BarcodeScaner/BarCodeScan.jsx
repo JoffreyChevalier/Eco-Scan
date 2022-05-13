@@ -6,23 +6,18 @@ import camera from "@assets/barcode_logo.png";
 import { getProduct } from "@services/api";
 import ProductContext from "@context/ProductContext";
 
-function BarCodeScan(products) {
+function BarCodeScan() {
   const firstUpdate = useRef(true);
   const [isStart, setIsStart] = useState(false);
   const [barcode, setBarcode] = useState("");
   const [actualBarcode, setActualBarcode] = useState("");
-  const [productName, setProductName] = useState([]);
-  const [productImage, setProductImage] = useState([]);
-  const [productScore, setProductScore] = useState([]);
-  const { setBarcodeContext } = useContext(ProductContext);
-  // console.log(barcode);
-
-  function onNewProductScanned() {
-    onChange([
-      ...products,
-      { name: productName, image: productImage, score: productScore },
-    ]);
-  }
+  const {
+    setProductImage,
+    setProductName,
+    setProductScore,
+    setBarcodeContext,
+    barcodeContext,
+  } = useContext(ProductContext);
 
   async function fetchData() {
     await getProduct(barcode);
@@ -34,12 +29,17 @@ function BarCodeScan(products) {
 
   const onKeyPress = (e) => {
     if (e.keyCode === 13) {
-      setBarcode(actualBarcode);
-      fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+      setBarcodeContext(actualBarcode);
+
+      console.log(barcode);
+
+      fetch(
+        `https://world.openfoodfacts.org/api/v0/product/${actualBarcode}.json`
+      )
         .then((res) => res.json())
         .then((data) => {
           setProductImage(data.product.image_small_url);
-          setProductName(data.product.product_name_en);
+          setProductName(data.product.product_name_fr);
           setProductScore(data.product.ecoscore_grade);
         });
     }
@@ -65,8 +65,6 @@ function BarCodeScan(products) {
     // stopScanner();
     setBarcode(res.codeResult.code);
   };
-
-  setBarcodeContext(barcode);
 
   const startScanner = () => {
     Quagga.init(
