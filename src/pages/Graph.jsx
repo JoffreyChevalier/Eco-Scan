@@ -12,10 +12,14 @@ export default function Graph() {
           <Link to="/">
             <img src={logo} className="h-14" alt="logo" />
           </Link>
-          <h1 className="text-center font-extrabold font-title text-4xl">
-            Mes résultats
+          <h1 className="text-center text-slate-700 font-extrabold font-title text-4xl">
+            Mon resumé
           </h1>
-          <img src={user} className="h-10 justify-end rounded-lg" alt="user" />
+          <img
+            src={user}
+            className="h-10 justify-end rounded-full"
+            alt="user"
+          />
         </div>
       </header>
 

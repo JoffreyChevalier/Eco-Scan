@@ -196,7 +196,7 @@ function BarCodeScan(products) {
           {isStart ? (
             <div className="flex flex-col items-center">
               <React.Fragment>
-                <div id="scanner-container" className="w-[32rem]" />
+                <div id="scanner-container" className="w-[20rem]" />
               </React.Fragment>
               <span>
                 <img src={stopcamera} className="h-20" alt="Barcode logo" />{" "}
