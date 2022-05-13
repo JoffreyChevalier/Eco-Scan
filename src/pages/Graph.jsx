@@ -24,7 +24,7 @@ export default function Graph() {
       </header>
 
       <h2 className="mt-8 ml-8">Progression globale</h2>
-      <img className="h-64 w-auto m-auto mt-8" src={graphique} />
+      <img className="h-64 w-auto m-auto mt-8 border-solid border border-[#4A7856] rounded-lg" src={graphique} />
       <Course_graphPage title="Course du 12/03/2022" score="60/100" />
       <Course_graphPage title="Course du 10/03/2022" score="55/100" />
       <Course_graphPage title="Course du 08/03/2022" score="48/100" />

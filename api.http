@@ -6,3 +6,5 @@ Content-Type: application/json
 }
 
 ###
+
+GET https://world.openfoodfacts.org/api/v0/product/3245413166142.json
