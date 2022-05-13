@@ -1,8 +1,8 @@
 function ShoppingCard({ img, title, date }) {
   return (
-    <div>
+    <div className="w4/5">
       <a
-        className="m-4 flex justify-between items-top overflow-hidden border border-gray-100 rounded-lg "
+        className="m-4 flex justify-between items-center overflow-hidden border border-gray-100 rounded-lg "
         href=""
       >
         <div>
@@ -14,7 +14,7 @@ function ShoppingCard({ img, title, date }) {
           <p className="mt-2 text-sm text-gray-500"> {date} :</p>
         </div>
 
-        <img className="w-28" src={img} alt="" />
+        <img className="w-8 h-8" src={img} alt="" />
       </a>
     </div>
   );
